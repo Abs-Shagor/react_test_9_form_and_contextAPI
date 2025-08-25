@@ -17,7 +17,6 @@ const SpecialPerson = () => {
 
             <p className='mb-5'>Yes! I got the {gift} </p>
 
-            <p>Click the below button to Add 10 Taka to Grandfather,s money</p>
             <button onClick={handleMoney} className='btn'>Add 10Taka</button>
         </div>
     );

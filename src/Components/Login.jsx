@@ -1,5 +1,8 @@
 import { useRef, useState } from "react";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+
+import { Helmet } from 'react-helmet';
+
 
 const Login = () => {
     // We can access the value of input field in 3-4 way
@@ -41,7 +44,7 @@ const Login = () => {
         console.log(email1, email2, email3);
         console.log(password1, password2, password3);
 
-        if(email1==='abtjoy15@gmail.com' && password1==='1234' && checked1) {
+        if (email1 === 'abtjoy15@gmail.com' && password1 === '1234' && checked1) {
             navigate('/profile');
         }
         else {
@@ -51,6 +54,10 @@ const Login = () => {
 
     return (
         <div className=" max-w-[400px] mx-auto border border-gray-400 rounded-t-md mt-20 ">
+            <Helmet>
+                <title>Codeforces | Login</title>
+            </Helmet>
+
             <h3 className="text-[20px] text-[#3B5998] font-semibold border-b border-gray-400 px-2 ">Login into Codeforces</h3>
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-5 my-5 px-2  ">

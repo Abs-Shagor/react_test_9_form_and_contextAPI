@@ -8,6 +8,10 @@ import Login from './Components/Login'
 import Register from './Components/Register'
 import ErrorPage from './Components/ErrorPage'
 import Profile from './Components/Profile'
+import Map1 from './Components/MapAPI/Map1'
+import Grandpa from './Components/ContextAPI/Grandpa'
+
+
 
 const router = createBrowserRouter(
   [
@@ -16,6 +20,14 @@ const router = createBrowserRouter(
       element: <Home></Home>,
       errorElement: <ErrorPage></ErrorPage>,
       children:[
+        {
+          path: '/map',
+          element: <Map1></Map1>
+        },
+        {
+          path: '/contextApi',
+          element: <Grandpa></Grandpa>
+        },
         {
           path: '/login',
           element: <Login></Login>
